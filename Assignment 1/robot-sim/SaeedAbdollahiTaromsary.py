@@ -66,7 +66,7 @@ def find_silver():
 			rot_y=token.rot_y
 	if dist==100:
 		return -1, -1
-    else:
+    	else:
    		return dist, rot_y
    		
 def find_gold():
@@ -79,31 +79,31 @@ def find_gold():
 			rot_y=token.rot_y
 	if dist==100:
 		return -1, -1
-    else:
+    	else:
    		return dist, rot_y
    		
+
 def moveToObject(obj_dis,obj_rot):
 	#A function to move the robot to the target
-    if obj_dis <0.4:
-    	print("Found it!")
-        test=R.grab() # if we are close to the token, we grab it.
-        print(test)
+	if obj_dis <0.4:
+    		print("Found it!")
+        	test=R.grab() # if we are close to the token, we grab it.
 		print("Gotcha!")
 		object_state = 1;
-    elif -a_th<= obj_rot <= a_th: # if the robot is well aligned with the token, we go forward
-       print("Ah, here we are!.")
-       drive(10, 0.5)
-       object_state = 0;
-    elif obj_rot < -a_th: # if the robot is not well aligned with the token, we move it on the left or on the right
-       print("Left a bit...")
-       turn(-2, 0.5)
-       object_state = 0;
-    elif obj_rot > a_th:
-       print("Right a bit...")
-       turn(+2, 0.5)
-       object_state = 0;
+	elif -a_th<= obj_rot <= a_th: # if the robot is well aligned with the token, we go forward
+       		print("Ah, here we are!.")
+       		drive(10, 0.5)
+       		object_state = 0;
+	elif obj_rot < -a_th: # if the robot is not well aligned with the token, we move it on the left or on the right
+		print("Left a bit...")
+       		turn(-2, 0.5)
+       		object_state = 0;
+	elif obj_rot > a_th:
+        	print("Right a bit...")
+       		turn(+2, 0.5)
+       		object_state = 0;
 	return object_state
-
+	
 print("*******************Robot Task Starts*******************")
 while 1:
 	#Step 1: Try to find a silver object
@@ -113,7 +113,7 @@ while 1:
 		#If no silver object found, do a random movement!
 		print("Robot Message: If no silver object found, do a random movement!")
 		drive(-10, 0.5)
-		turn(8 + random.randint(-2, 2), 1)
+		turn(8 + random.randint(-3, 3), 1)
 	if object_state == 0:
 		#Step 2: A a silver object found, move robot to the object
 		print("Robot Message: A a silver object found, move robot to the object!")
@@ -126,8 +126,8 @@ while 1:
 			if dist_gold == -1:
 				#If no gold object found, do a random movement!
 				print("Robot Message: If no gold object found, do a random movement!")
-				drive(8 + random.randint(-2, 2), 1)
-				turn(+10, 2)
+				drive(8 + random.randint(-3, 3), 1)
+				turn(+10, 1)
 
 			#Step 4: A a gold object found, move robot to the object
 			print("Robot Message: A a gold object found, move robot to the object!")
@@ -137,7 +137,7 @@ while 1:
 				#Step 5: The robot puts the silver objects near the gold object, now release the silver object
 				print("Robot Message: The robot puts the silver objects near the gold object, now release the silver object!")
 				R.release()
-				drive(-10, 1)
+				drive(-10, 0.5)
 				turn(8 + random.randint(0, 8), 5)
 				object_state = 0
 
@@ -145,9 +145,3 @@ while 1:
 				print("Okay, now try to do another task!")
 				break
 				
-		      
-
-       
-       
-
-	
