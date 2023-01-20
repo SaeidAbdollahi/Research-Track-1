@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find robot_sim)/launch/assignment1.launch" />
+    <param name="print_rate" value= "1" />
+
+    <node pkg="robot_sim" type="odometer.py" name="odometer"/>
+    <node pkg="robot_sim" type="user_interface.py" name="user_interface" output="screen" launch-prefix="gnome-terminal --command" />
+    <node pkg="robot_sim" type="goal_summary.py" name="goal_summary" output="screen" launch-prefix="gnome-terminal --command" />
+    <node pkg="robot_sim" type="kinematic_monitor.py" name="kinematic_monitor" output="screen" launch-prefix="gnome-terminal --command" />
+</launch>

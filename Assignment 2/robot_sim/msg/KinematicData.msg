@@ -1,0 +1,3 @@
+float32 distance
+float32 vel_x_avrg
+float32 vel_y_avrg

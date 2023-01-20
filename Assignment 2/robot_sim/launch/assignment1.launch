@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find robot_sim)/launch/sim_w1.launch" />
+    <param name="des_pos_x" value= "0.0" />
+    <param name="des_pos_y" value= "1.0" />
+    <node pkg="robot_sim" type="wall_follow_service.py" name="wall_follower" />
+    <node pkg="robot_sim" type="go_to_point_service.py" name="go_to_point"  />
+    <node pkg="robot_sim" type="bug_as.py" name="bug_action_service" output="screen" />
+</launch>
