@@ -59,7 +59,7 @@ The project published under the name 'robot_sim' and contains the following file
   - **world:** `Contains .world files that describe the robot's environment.`
   - **CMakeLists.txt:** `The file is used to build the project with the Catkin and CMake build systems.`
   - **package.xml:** `The file is used to provide the general information of the released package and also the build and execution dependencies of the application.`
--
+
 
 ## Pseudocode of Node 1
 
