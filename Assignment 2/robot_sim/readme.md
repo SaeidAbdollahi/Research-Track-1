@@ -122,4 +122,4 @@ A challenge in implementing the algorithm is when the position is in a range tha
 is not accessible. The Planning algorithm is still trying to guide the robot to
 reach that point, which can cause it to move toward the wall and overturn the robot.
 
-To solve this problem, it is suggested that the ability to get the target is also included in the planning algorithm so that the robot moves toward the target point. If it is not possible to reach it, it stops in a safe radius from the target point.
+To solve this problem, it is suggested that the ability to get the target is also included in the planning algorithm so that the robot moves toward the target point, If it is not possible to reach it, it stops in a safe radius from the target point.
