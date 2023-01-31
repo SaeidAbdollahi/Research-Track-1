@@ -119,8 +119,7 @@ while 1:
 				do a random movement
 			move robot to the gold_object
 			if the robot put the silver_objects near the gold_object:
-				now release the silver_object
-				now try to do another task
+				now release the silver_object and try to do another task
 				break
 ```
 
