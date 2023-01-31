@@ -144,3 +144,9 @@ Doing the Last Task:
 All Tasks Done:
 
 ![alt text](https://github.com/SaeidAbdollahi/Research-Track-1/blob/main/Assignment%201/Simulation%20Pictures/finish.png?raw=true)
+
+## Possible Improvements
+
+A challenge in performing each task is the movement of the robot towards the silver objects that have already been moved, which means that in the previous stages, the robot has moved the silver object and placed it near the golden object, but at the beginning of the new task, it is possible to try again to move the previous silver objects.
+
+A solution for this problem is assigning IDs to silver objects and creating a list of completed tasks, in this case, after moving each silver object and placing it near the golden object, the ID of the silver object should be put in the list of completed tasks so that the robot does not go to that silver object again in the next turns.
