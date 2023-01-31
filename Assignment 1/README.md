@@ -118,9 +118,8 @@ while 1:
 			if no gold_object found:
 				do a random movement
 			move robot to the gold_object
-			if the robot put the silver_objects near the gold_object:
-				now release the silver_object
-				now try to do another task
+			if the robot put the silver_object near the gold_object:
+				now release the silver_object and try to do another task
 				break
 ```
 
